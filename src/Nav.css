@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+font-family: 'Montserrat';font-size: 22px;
+}
+.nav{
+    background-color: #0f8abe;
+}
+.space{
+    height: 7.8vh;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    top: 0;
+    position: sticky;
+}
+.space img{
+  height: 1.9rem;
+}
+.space h1{
+    color:#ffffff;
+    font-size: 1.5rem;
+}
+.space ul{
+    display: flex;
+}
+.space li{
+    font-size: 16px;
+    list-style: none;
+    margin: 0rem 1rem;
+}
+.space ul li a{
+    color:#ffffff;
+    text-decoration: none;
+}
+.logo{
+  display: flex;
+  align-items: center;
+}
+.dropbtn {
+  padding: 1.6rem 0rem;
+    color: white;
+    font-size: 16px;
+    border: none;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown a{
+    text-decoration: none;
+  }
+  
+  .dropdown-content {
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    top: 207%;
+    display: none;
+    position: absolute;
+    min-width: 150px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content .text-menu {
+    transition: 0.8s ease;
+    color: black;
+    font-size: 14px;
+    padding: 12px 15px;
+    text-decoration: none;
+    display: block;
+  }
+  .dropdown-content .text-menu{
+    color: #52514a;
+  }
+  .dropdown-content a:hover {
+    animation: alternate;
+    background-color: #0f89be1f;
+    border-radius: 5px;
+}
+  
+.dropdown:hover .dropdown-content {display: block;}
