@@ -1,7 +1,7 @@
 import React from "react";
 import "./Nav.css";
 import logo from "./Bo Project.png";
-
+import { Link } from "react-router-dom";
 function Nav() {
   return (
     <div className="nav">
@@ -12,27 +12,37 @@ function Nav() {
         </div>
         <div className="menu">
           <ul>
+            <Link to={"/"}>
             <li>
-              <a href="#">Home</a>
+              Home
             </li>
+            </Link>
+            <Link to={"/Contact"}>
             <li>
-              <a href="#">Contact</a>
+              Contact
             </li>
+            </Link>
+            <Link to={"/Aboutus"}>
             <li>
-              <a href="#">About Us</a>
+              About Us
             </li>
+            </Link>
+            <Link to={"/Project"}>
             <li>
-              <a href="#">Project</a>
+              Project
             </li>
+            </Link>
             <li>
             <div class="dropdown">
-              <a href="#" class="dropbtn">
+            <Link to={"/Pages"}>
+              <a href="" class="dropbtn">
                 Pages ▿
               </a>
+              </Link>
               <div class="dropdown-content">
-                <a className="text-menu" href="#">Support</a>
-                <a className="text-menu" href="#">Learn more</a>
-                <a className="text-menu" href="#">Who we are?</a>
+              <Link to={"/Support"}><a className="text-menu" href="">Support</a></Link>
+              <Link to={"/Services"}><a className="text-menu" href="">Sevices</a></Link>
+              <Link to={"/Whoweare"}><a className="text-menu" href="">Who we are?</a></Link>
               </div>
             </div>
             </li>

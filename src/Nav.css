@@ -1,89 +1,154 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat');
-*{
-    margin: 0;
-    padding: 0;
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
 }
-body{
-font-family: 'Montserrat';font-size: 22px;
+body {
+  font-family: "Montserrat";
+  font-size: 22px;
 }
-.nav{
-    background-color: #0f8abe;
+.nav {
+  background-color: #0f8abe;
 }
-.space{
-    height: 7.8vh;
-    width: 80%;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    top: 0;
-    position: sticky;
+.space {
+  height: 7.8vh;
+  width: 80%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  top: 0;
+  position: sticky;
 }
-.space img{
+.space img {
   height: 1.9rem;
 }
-.space h1{
-    color:#ffffff;
-    font-size: 1.5rem;
+.space h1 {
+  color: #ffffff;
+  font-size: 1.5rem;
 }
-.space ul{
-    display: flex;
+.space ul {
+  display: flex;
 }
-.space li{
-    font-size: 16px;
-    list-style: none;
-    margin: 0rem 1rem;
+.space li {
+  font-size: 16px;
+  list-style: none;
+  margin: 0rem 1rem;
 }
-.space ul li a{
-    color:#ffffff;
-    text-decoration: none;
+.space ul li {
+  cursor: pointer;
+  color: #ffffff;
+  text-decoration: none;
 }
-.logo{
+.logo {
   display: flex;
   align-items: center;
 }
 .dropbtn {
-  padding: 1.6rem 0rem;
-    color: white;
-    font-size: 16px;
-    border: none;
-  }
-  
-  .dropdown {
-    position: relative;
-    display: inline-block;
-  }
-
-  .dropdown a{
-    text-decoration: none;
-  }
-  
-  .dropdown-content {
-    background-color: rgb(255, 255, 255);
-    border-radius: 5px;
-    top: 207%;
-    display: none;
-    position: absolute;
-    min-width: 150px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-  }
-  
-  .dropdown-content .text-menu {
-    transition: 0.8s ease;
-    color: black;
-    font-size: 14px;
-    padding: 12px 15px;
-    text-decoration: none;
-    display: block;
-  }
-  .dropdown-content .text-menu{
-    color: #52514a;
-  }
-  .dropdown-content a:hover {
-    animation: alternate;
-    background-color: #0f89be1f;
-    border-radius: 5px;
+  text-decoration: none;
+  padding: 1.7rem 0rem;
+  color: white;
+  font-size: 16px;
+  border: none;
 }
-  
-.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown {
+  color: white;
+  text-decoration: none;
+}
+
+.dropdown-content {
+  opacity: 0;
+    transform: translateY(-10px); /* Move up slightly */
+    visibility: hidden;
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  top: 220%;
+  display: none;
+  position: absolute;
+  min-width: 150px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content .text-menu {
+  transition: 0.8s ease;
+  color: black;
+  font-size: 14px;
+  padding: 12px 15px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown-content .text-menu {
+  color: #52514a;
+}
+.dropdown-content a:hover {
+  animation: alternate;
+  background-color: #0f89be1f;
+  border-radius: 5px;
+}
+
+.dropdown:hover .dropdown-content {
+  opacity: 1;
+    transform: translateY(0); /* Bring it down */
+    visibility: visible;
+  display: block;
+}
+
+/* Default styles apply to larger screens */
+
+/* Responsive for iPhone 14 Pro Max (Width: 430px) */
+@media screen and (max-width: 430px) {
+  .nav {
+    height: 15vh;
+  }
+  .space {
+    width: 90%; /* Make navbar more flexible */
+    height: vh;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;
+    text-align: center;
+  }
+  .space h1 {
+    font-size: 1.2rem;
+  }
+  .space ul {
+    flex-direction: column;
+    padding: 0.5rem 0;
+  }
+  .space li {
+    margin: 0.5rem 0;
+  }
+  .dropdown-content {
+    top: 150%; /* Adjust dropdown position */
+    min-width: 120px; /* Reduce width */
+  }
+}
+
+/* Responsive for iPad (Width: 768px - 1024px) */
+@media screen and (max-width: 1024px) {
+  .space {
+    width: 83%;
+    height: 8vh;
+  }
+  .space h1 {
+    font-size: 1.3rem;
+  }
+  .space ul {
+    justify-content: center;
+  }
+  .space li {
+    font-size: 14px;
+    margin: 0rem 0.8rem;
+  }
+  .dropdown-content {
+    top: 180%; /* Adjust dropdown spacing */
+  }
+}
